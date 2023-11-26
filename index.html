@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    
+    
+    <script>
+
+        function greeting(){
+            console.log(`Hello, said ${this.name} the ${this.breed}`);
+        }
+
+        function Cat(name, breed, color, greeting){
+            this.name = name;
+            this.breed = breed;
+            this.color = color;
+            this.greeting = greeting;
+
+        }
+
+        const cat = new Cat("Bertie", "Cymric", "white", greeting);
+        const cat2 = new Cat("Hans", "Hauskatze", "black", greeting);
+
+        cat.greeting();
+        cat2.greeting();
+
+  
+
+
+
+    </script>
+  </body>
+
+</html>
